@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    overflow: hidden;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 20px;
+    float: left;
+    font-size: xx-large;
+    color: white;
+}
+
+nav {
+    margin-right: 20px;
+    font-size: large;
+    list-style: none;
+    float: right;
+
+
+
+}
+
+nav input[type=button] {
+    margin-top: -2px;
+    background-color: transparent;
+    color: antiquewhite;
+    font-size: large;
+    border: 1px white solid;
+    border-radius: 4px;
+    padding: 5px 10px 1px 10px;
+    transition-duration: 0.30s;
+}
+
+nav input[type=button]:hover {
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+    transition: 0.5;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    position: relative;
+}
+
+nav a::after {
+    transform-origin: right;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    left: 0;
+    bottom: -0px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+nav a:hover::after {
+    transform-origin: left;
+    transform: scale(1);
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: baseline;
+
+}
+
+.login {
+    backdrop-filter: blur(20px);
+    height: 440px;
+    width: 400px;
+    border: solid 2px rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.login .form-box {
+    width: 100px;
+    padding: 40px;
+}
